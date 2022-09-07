@@ -1,0 +1,22 @@
+.footer {
+  height: 27%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // position: absolute;
+  // bottom: 40px;
+  // left: 50%;
+  // transform: translateX(-50%);
+  &-socials{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    position: relative;
+    top: 19px;
+    &__icon{
+      font-size: 2.2rem;
+    }
+  }
+}
