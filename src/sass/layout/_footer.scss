@@ -1,22 +1,31 @@
 .footer {
-  height: 27%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // position: absolute;
-  // bottom: 40px;
-  // left: 50%;
-  // transform: translateX(-50%);
-  &-socials{
-    list-style-type: none;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 26px;
+    background-image: url("../../images/pattern-hills.svg");
+    background-repeat: no-repeat;
+    background-size: 240% 100%;
+    background-position: 88% 100%;
+    @include respon (tab){
+      background-size: 100% 100%;
+      background-position: 100% 100%;
+    }
+  &-socials {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 32px;
+    height: 100%;
     position: relative;
-    top: 19px;
-    &__icon{
-      font-size: 2.2rem;
+    bottom: .3rem;
+    @include respon (desk){
+      gap: 24px;
+    }
+    &__icon {
+      font-size: 24px;
+      color: $grayishBlue;
     }
   }
 }

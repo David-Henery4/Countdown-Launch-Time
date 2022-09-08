@@ -7,9 +7,26 @@
 }
 
 html {
-  font-size: 62.5%; // 1rem = 10px
+  font-size: 50%; // 1rem = 8px
+  @include respon(mob) {
+    font-size: 62.5%; // 1rem = 10px
+  }
+  @include respon (tab){
+    font-size: 75%; // 75% = 1rem = 12px
+  }
+  @include respon (lap){
+    font-size: 87.5%; // 87.5% = 1rem = 14px
+  }
+  @include respon (desk){
+    font-size: 100%; 
+  }
 }
 
 body {
-  background-color:$veryDarkBlue;
+  // background-color: $veryDarkBlue;
+    background: linear-gradient($veryDarkBlue, 95%,$softRed);
+  // background-image: url("../../images/bg-stars.svg");
+  // background-repeat: no-repeat;
+  // /* background-size: cover; */
+  // background-position: 50% 0%;
 }

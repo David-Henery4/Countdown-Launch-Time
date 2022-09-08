@@ -1,0 +1,28 @@
+
+@mixin respon ($breakpoint) {
+    @if ($breakpoint == mob) {
+        @media (min-width: 21.56em) { // 345px
+            @content
+        }
+    };
+    @if ($breakpoint == tab) {
+        @media (min-width: 43.75em) { // 700px
+            @content
+        }
+    };
+    @if ($breakpoint == lap) {
+        @media (min-width: 62.5em) { // 1000px
+            @content
+        }
+    };
+    @if ($breakpoint == lap) {
+        @media (min-width: 62.5em) { // 1000px
+            @content
+        }
+    };
+    @if ($breakpoint == desk) {
+        @media (min-width: 77.81em) { // 1245px
+            @content
+        }
+    };
+}
