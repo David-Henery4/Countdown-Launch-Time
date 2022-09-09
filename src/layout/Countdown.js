@@ -13,6 +13,12 @@ const Countdown = () => {
     setCountdownData(data);
   }
   //
+  const addFlip = () => {
+    const upper = document.querySelector(".countdown-upper")
+    upper.classList.add("countdown-upper-flip");
+  }
+  // addFlip()
+  //
   useEffect(() => {
     // updateClock()
     const secs = setTimeout(updateClock, [1000])
