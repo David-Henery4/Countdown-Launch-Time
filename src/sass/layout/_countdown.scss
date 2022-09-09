@@ -1,41 +1,86 @@
 .countdown {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1.8rem;
-    position: relative;
-    top: 6px;
-    @include respon (desk){
-      gap: 1.9rem;
-    }
-  &-tab{
-    display: grid;
-    place-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.8rem;
+  position: relative;
+  top: 6px;
+  @include respon(desk) {
+    gap: 1.9rem;
+  }
+  &-upper,
+  &-downer {
+    height: 50%;
+    width: 100%;
+    border-radius: 5px;
+  }
+  &-upper {
+    background-color: $veryDarkBlue;
+    // position: relative;
+  }
+  &-downer {
+    background-color: $darkDesaturatedBlue;
+  }
+  &-tab {
+    // display: grid;
+    // place-items: center;
     min-width: 6.8rem;
     height: 6.6rem;
     position: relative;
     /* top: 5px; */
-    border-radius: 5px;
-    background-color: hsl(236deg, 21%, 26%);
+    // border-radius: 5px;
+    // overflow: hidden;
+    // background-color: hsl(236deg, 21%, 26%);
     text-align: center;
     font-size: 3.4rem;
-    @include respon (desk){
+    @include respon(desk) {
       width: 7.8rem;
       height: 7.6rem;
       font-size: 4.4rem;
     }
-    &__num{
+    &__num {
       color: $softRed;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    &__names{
-    position: absolute;
-    font-size: 0.6rem;
-    bottom: -2.2rem;
-    letter-spacing: .4rem;
-    text-transform: uppercase;
-    @include respon (desk){
-      font-size: .7rem;
+    &__names {
+      position: absolute;
+      font-size: 0.6rem;
+      bottom: -2.2rem;
+      letter-spacing: 0.4rem;
+      text-transform: uppercase;
+      left: 50%;
+      transform: translateX(-50%);
+      letter-spacing: 0.4rem;
+      color: $grayishBlue;
+      @include respon(desk) {
+        font-size: 0.7rem;
+      }
     }
-    }
+  }
+}
+
+// FLIP ANIMATIONS STUFF
+
+.countdown-upper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-radius: 5px;
+  background-color: $veryDarkBlue;
+  transition: 2s all;
+  // z-index: 1;
+}
+
+.countdown-upper {
+  &:hover {
+    cursor: pointer;
+    transform: rotateY(180deg);
+    perspective: 200px;
   }
 }
