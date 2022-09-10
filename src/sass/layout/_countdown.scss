@@ -18,15 +18,18 @@
   &-upper {
     background-color: $veryDarkBlue;
     border-bottom: 1px solid black;
-    &__num{
+    &__num {
       transform: translateY(25%);
     }
   }
   &-downer {
     background-color: $darkDesaturatedBlue;
     border-top: 1px solid black;
-    &__num{
+    border-bottom: 4px solid black;
+    &__num {
       transform: translateY(-50%);
+      position: relative;
+      z-index: 4;
     }
   }
   &-tab {
@@ -87,23 +90,66 @@
 //   z-index: 0;
 // }
 
-.countdown-upper-flip::after {
-  cursor: pointer;
-  transition: 1s all;
-  transform: rotateX(180deg);
-  transform-origin: bottom center;
-  // perspective: 200px;
+// .countdown-upper-flip::after {
+//   cursor: pointer;
+//   transition: 1s all;
+//   transform: rotateX(180deg);
+//   transform-origin: bottom center;
+//   // perspective: 200px;
+// }
+
+// .countdown-upper {
+//   &:hover {
+//     cursor: pointer;
+//     transition: 1s all;
+//     transform: rotateX(90deg);
+//     transform-origin: 50% 100%;
+//     // backface-visibility: hidden;
+//     // transform: translateY(100%);
+//     // transform: rotate3d(0.5 , 0, 1 , 180deg);
+//     // perspective: 200px;
+//   }
+// }
+
+.countdown-upper.flip::before {
+  content: "5";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-radius: 5px;
+  animation: topflip 250ms ease-in;
+  transform-origin: 50% 100%;
+  perspective: 300px;
+  background-color:$veryDarkBlue;
+  // background-color: red;
 }
 
-.countdown-upper {
-  &:hover {
-    cursor: pointer;
-    transition: 1s all;
-    transform: rotateX(180deg);
-    transform-origin: 50% 100%;
-    // backface-visibility: hidden;
-    // transform: translateY(100%);
-    // transform: rotate3d(0.5 , 0, 1 , 180deg);
-    // perspective: 200px;
+.countdown-downer.flip-down::after {
+  content:  "5";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-radius: 5px;
+  animation: bottomflip 250ms ease-out 250ms;
+  transform: rotateX(90deg);
+  transform-origin: top;
+  perspective: 300px;
+  // background-color: green;
+  background-color: $darkDesaturatedBlue;
+}
+
+@keyframes topflip {
+  100%{
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes bottomflip {
+  100%{
+    transform: rotateX(0deg);
   }
 }

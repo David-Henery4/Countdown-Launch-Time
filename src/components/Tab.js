@@ -1,6 +1,15 @@
 import React from "react";
 
 const Tab = ({ num, name }) => {
+  //
+  const addFlip = () => {
+    //
+    const upper = document.querySelector(".countdown-upper");
+    upper.classList.add("flip");
+    const downer = document.querySelector(".countdown-downer");
+    downer.classList.add("flip-down");
+  };
+  // addFlip()
   return (
     <div className="countdown-tab">
       <div className="countdown-upper">
@@ -12,6 +21,6 @@ const Tab = ({ num, name }) => {
       <p className="countdown-tab__names">{name}</p>
     </div>
   );
-};
+};;
 
 export default Tab;
