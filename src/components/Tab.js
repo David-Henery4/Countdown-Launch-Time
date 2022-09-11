@@ -1,6 +1,6 @@
 import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+
 
 const Tab = ({ num, name }) => {
   const[isFlip, setIsFlip] = useState(false)
@@ -11,7 +11,6 @@ const Tab = ({ num, name }) => {
   //
   useEffect(() => {
     addFlip()
-    // console.log("change")
   }, [num])
   //
   return (
@@ -26,7 +25,6 @@ const Tab = ({ num, name }) => {
       >
         <p className="countdown-tab__num countdown-upper__num">{num}</p>
       </div>
-      {/* <p className="countdown-tab__num number-middle">{num}</p> */}
       <div className="countdown-downer">
         <p className="countdown-tab__num countdown-downer__num">{num}</p>
       </div>
@@ -38,8 +36,6 @@ const Tab = ({ num, name }) => {
           setIsFlip(false)
         }}
       >
-        {/* <p className="countdown-tab__num countdown-downer__num">
-        </p> */}
       </div>
       <p className="countdown-tab__names">{name}</p>
     </div>

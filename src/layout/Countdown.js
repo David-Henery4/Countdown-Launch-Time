@@ -4,7 +4,7 @@ import getCountdownData from "../count-data/countdownData";
  
 const Countdown = () => {
   const [currentDate, setCurrentDate] = useState(new Date())
-  const [endDate, setEndDate] = useState(new Date(2023, 8, 9));
+  const [endDate, setEndDate] = useState(new Date(2022, 11, 19));
   const [countdownData, setCountdownData] = useState({})
   //
   const updateClock = () => {
@@ -14,9 +14,9 @@ const Countdown = () => {
   }
   //
   useEffect(() => {
-    // updateClock()
-    const secs = setTimeout(updateClock, [1000])
-    return () => clearTimeout(secs)
+    const secs = setTimeout(updateClock, [1000]);
+    return () => clearTimeout(secs);
+    // eslint-disable-next-line
   }, [currentDate])
   //
   return (

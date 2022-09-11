@@ -1,0 +1,30 @@
+// SCOOPED BORDER RADIUS
+
+.countdown-upper-flip::before,
+.countdown-upper-flip::after {
+  content: "";
+  position: absolute;
+  width: 16%;
+  height: 37%;
+  border-radius: 50%;
+  bottom: -25%;
+  background-color: $mostlyBlackVeryDarkBlue;
+}
+.countdown-downer-flip::before,
+.countdown-downer-flip::after {
+  content: "";
+  position: absolute;
+  width: 16%;
+  height: 37%;
+  border-radius: 50%;
+  top: -25%;
+  background-color: $mostlyBlackVeryDarkBlue;
+}
+.countdown-upper-flip::before,
+.countdown-downer-flip::after {
+  left: -10%;
+}
+.countdown-upper-flip::after,
+.countdown-downer-flip::before {
+  right: -10%;
+}

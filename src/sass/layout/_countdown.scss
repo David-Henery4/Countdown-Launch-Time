@@ -16,16 +16,18 @@
     overflow: hidden;
   }
   &-upper {
-    background-color: $veryDarkBlue;
-    border-bottom: 1px solid black;
+    background-color: $topTabBlue;
     &__num {
       transform: translateY(25%);
+      @include respon(desk) {
+        transform: translateY(15%);
+      }
     }
   }
   &-downer {
     background-color: $darkDesaturatedBlue;
-    border-top: 1px solid black;
-    border-bottom: 4px solid black;
+    border-top: 1.5px solid $mostlyBlackVeryDarkBlue;
+    border-bottom: .8rem solid $mostlyBlackVeryDarkBlue;
     &__num {
       transform: translateY(-50%);
       position: relative;
@@ -36,7 +38,7 @@
     min-width: 6.8rem;
     height: 6.6rem;
     position: relative;
-    background-color: black;
+    background-color: $mostlyBlackVeryDarkBlue;
     border-radius: 5px;
     text-align: center;
     font-size: 3.4rem;
@@ -62,99 +64,5 @@
         font-size: 0.7rem;
       }
     }
-  }
-}
-
-// FLIP ANIMATIONS STUFF
-
-.countdown-upper-flip{
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  top: 0;
-  left: 0;
-  border-radius: 5px;
-  perspective: 3000px;
-  overflow: hidden;
-  border-bottom: 1px solid black;
-  // outline: 1px solid black;
-  // border-top: 1px solid black;
-  background-color:$veryDarkBlue;
-  // z-index: 5;
-    p{
-    position: relative;
-    // z-index: -4;
-  }
-}
-
-.countdown-downer-flip{
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  top: 50%;
-  left: 0;
-  // overflow: hidden;
-  border-radius: 5px;
-  border-top: 1px solid black;
-  background-color: $darkDesaturatedBlue;
-  border-bottom: 4px solid black;
-  perspective: 3000px;
-  // z-index: 0;
-  p{
-    position: relative;
-    // z-index: -4;
-  }
-}
-
-.flip-top {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // height: 50%;
-  // border-radius: 5px;
-  border-top: 1px solid black;
-  animation: topflip 150ms ease-in;
-  transform-origin: 50% 100%;
-  perspective: 3000px;
-  perspective-origin: top;
-  // backface-visibility: hidden;
-  // background-color:$veryDarkBlue;
-  // background-color: red;
-}
-
-.flip-bottom {
-  // position: absolute;
-  // top: 50%;
-  // left: 0;
-  // width: 100%;
-  // height: 50%;
-  // border-radius: 5px;
-  animation: bottomflip 150ms ease-out 150ms;
-  transform: rotateX(90deg);
-  transform-origin: top;
-  perspective: 3000px;
-  perspective-origin: center;
-  // background-color: green;
-  // background-color: $darkDesaturatedBlue;
-}
-
-// .number-middle{
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   z-index: 0;
-// }
-
-@keyframes topflip {
-  100%{
-    transform: rotateX(90deg);
-  }
-}
-
-@keyframes bottomflip {
-  100%{
-    transform: rotateX(0deg);
   }
 }

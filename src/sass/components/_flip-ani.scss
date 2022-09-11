@@ -1,0 +1,54 @@
+// FLIP ANIMATIONS STUFF
+
+.countdown-upper-flip {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  perspective: 3000px;
+  overflow: hidden;
+  background-color: $topTabBlue;
+}
+
+.countdown-downer-flip {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 50%;
+  left: 0;
+  border-radius: 5px;
+  background-color: $darkDesaturatedBlue;
+  border-bottom: 0.8rem solid $mostlyBlackVeryDarkBlue;
+  perspective: 3000px;
+  overflow: hidden;
+}
+
+.flip-top {
+  border-top: 1px solid $mostlyBlackVeryDarkBlue;
+  animation: topflip 150ms ease-in;
+  transform-origin: 50% 100%;
+  perspective: 3000px;
+  perspective-origin: top;
+}
+
+.flip-bottom {
+  animation: bottomflip 150ms ease-out 150ms;
+  transform: rotateX(90deg);
+  transform-origin: top;
+  perspective: 3000px;
+  perspective-origin: center;
+}
+
+@keyframes topflip {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes bottomflip {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
