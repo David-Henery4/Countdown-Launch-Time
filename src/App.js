@@ -14,12 +14,12 @@ function App() {
         . Coded by <a href="https://www.djhwebdevelopment.com">David Henery</a>
         .
       </div>
-      <section className="main">
+      <main className="main">
         <div className="main__title">
           <h1>We're launching soon</h1>
         </div>
         <Countdown />
-      </section>
+      </main>
       <Footer />
     </div>
   );

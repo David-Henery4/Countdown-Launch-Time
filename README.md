@@ -32,9 +32,8 @@ Users should be able to:
 
 ### Links
 
-(LINKS TO BE ADDED!)
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor solution Page](https://www.frontendmentor.io/solutions/countdowntimer-react-sassscss-flexbox-javascript-responsive-lgcHp9V-No)
+- Live Site URL: [Countdown Launch](https://countdown-launch-timer.netlify.app)
 
 ## My process
 
